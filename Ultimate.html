@@ -1,0 +1,72 @@
+<html>
+<head>
+The Ultimate review for web dynamics. 
+<link rel="stylesheet" href="Ultimate.css">
+		<script src="Ultimate/Ultimate.js"></script>
+		<script src="Ultimate.js"></script>
+</head>
+<script>
+function Validate()
+{
+var user = document.forms["form"]["fname"].value;
+if(user === "")
+{
+alert("You've messed up");
+return false;
+}
+}
+$( function() {
+   var icons = {
+		//icons are selected by class (images folder required)
+      		header: "ui-icon-circle-arrow-e",
+      		activeHeader: "ui-icon-circle-arrow-s"
+    				};
+				//jQuery selector
+				$( "#accordion" ).accordion({
+      					icons: icons,
+					//to collapse open panel
+					collapsible: true
+    				});
+			} );
+function myFunction() {
+    var text = "";
+    var i = 0;
+    while (i < 5) {
+        text += "<br>The number is " + i;
+        i++;
+ }
+    document.getElementById("demo").innerHTML = text;
+}
+//function For() {
+    //var text = "";
+    //var i;
+    //for (i = 0; i < 5; i++) {
+        text += "The number is " + i + "<br>";
+    //}
+    //document.getElementById("for").innerHTML = text;
+</script>
+<body>
+<div id="accordion">
+  <h3>Form</h3>
+  <div>
+    <form name = "form" action ="Ultimate.php" onsubmit = "return Validate" method = "post">
+     Name: <input type = "text" name = "fname">
+    <input type = "submit" value = "Submit">
+  </div>
+  <h3> While</h3>
+   <div>
+   <button onclick="myFunction()">Try it</button>
+   <p id="demo"></p>
+   </div>
+  <h3>For</h3>
+  <div>
+  <button onclick="For()">Try it</button>
+   <p id="for"></p>
+  </div>
+  
+</div>  
+</body>
+
+
+
+</html>
